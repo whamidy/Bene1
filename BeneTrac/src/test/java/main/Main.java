@@ -90,7 +90,7 @@ public class Main {
 	
 	driver.findElement(By.linkText("Log Out")).click();
 	Thread.sleep(2000);
-	log.info("Logout successful");
+	log.info("LOGOUT SUCCESSFUL");
 	
 	}
   
