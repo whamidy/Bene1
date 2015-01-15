@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Suite" parallel="false">
+
+<parameter name="url" value="https://acceptance.benetrac.com/btrac/broker.asp" />
+<parameter name="gohome" value="https://acceptance.benetrac.com/btrac/Site.asp?PPVS=" />
+<parameter name="username" value="whamidy" />
+<parameter name="password" value="Password1" />
+<parameter name="site" value="cell5572" />
+
+<parameter name="employeefn" value="Automation" />
+<parameter name="employeeln" value="User" />
+<parameter name="employeeinitials" value="Autouser" />
+<parameter name="employeepassword" value="Password1" />
+<parameter name="employeepasswordnew" value="Password2" />
+ 
+
+<!-- ADMINISTRATOR TESTS -->
+<test name="Administrator" preserve-order="true">
+<classes>
+<class name="Main.Main"/>
+<methods>
+<include name="testLogin" />
+<include name="testAddNormalEE" />
+<include name="testAddDependent" />
+<!-- <include name="testAddMedical" /> -->
+<!-- <include name="testAddDental" /> -->
+<!-- <include name="testAddVision" /> -->
+<!-- <include name="testAddCoreLife" /> -->
+<include name="testAddCoreDependentLife" />
+<!-- <include name="testAddLongTermDisability" /> -->
+<!-- <include name="testAddVoluntarySTD" /> -->
+
+<!-- <include name="testAddCoreSTD" /> Not for this site -->
+<!-- <include name="testAddCoreLTD" /> Not for this site -->
+<!-- <include name="testAddHealthCareFSA" /> Not for this site -->
+<!-- <include name="testAddDependentCareFSA" /> Not for this site -->
+<!-- <include name="testAddVoluntaryEELife" /> Not for this site -->
+
+<!-- <include name="testDeleteDependent" /> -->
+<!-- <include name="testTerminateEE" /> -->
+
+
+	<!-- BATCH PROCESSING -->
+<!-- <include name="testBatchProcessingEnrollAllMissingCore" /> -->
+<!-- <include name="testBatchProcessingRateTable" /> -->
+<!-- <include name="testBatchProcessingCheckEligibilityonExistingEnrollments" /> -->
+
+	<!-- REPORTS -->
+<!-- <include name="testAuditReport" /> -->
+<!-- <include name="testBeneficiariesReport" /> -->
+<!-- <include name="testBillingMatrixReport" /> -->
+<!-- <include name="testBillingReport" /> -->
+<!-- <include name="testCostBenefitReport" /> -->
+<!-- <include name="testDeclineBenefitsReport" /> -->
+<!-- <include name="testDemographicReport" /> -->
+<!-- <include name="testElectionStatementsReport" /> -->
+<!-- <include name="testEnrollmentMatrixReport" /> -->
+<!-- <include name="testEnrollmentReport" /> -->
+<!-- <include name="testHipaaCertificates" /> -->
+<!-- <include name="testMonthlyHeadCountReport" /> -->
+<!-- <include name="testMSAccessExtract" /> -->
+<!-- <include name="testPopulatedImportTemplateReport" /> -->
+<!-- <include name="testRunRateReviewReport" /> -->
+
+<!-- <include name="testCobraInitialNotice" /> -->
+<!-- <include name="testCobraElectionNotice" /> -->
+<!-- <include name="testCobraTerminationNotice" /> -->
+<!-- <include name="testCobraPremiumNotice" /> -->
+
+<!-- <include name="testSecureUploadCenter" /> -->
+<!-- <include name="testLogOut" /> -->
+
+
+     
+<!-- EMPLOYEE TESTS -->
+<!-- <include name="testNavigateHome" /> -->
+<!-- <include name="testEELogin" /> -->
+<!-- <include name="testEEAddDependent" /> -->
+<!-- <include name="testEEAddSpouse" /> -->
+<!-- <include name="testProceedToMyBenefits" /> -->
+<!-- <include name="testEEAddMedical" /> -->
+<!-- <include name="testEEAddDental" /> -->
+<!-- <include name="testEEAddVision" /> -->
+<!-- <include name="testEEAddCoreLife" /> -->
+<!-- <include name="testEEAddCoreDependentLife" /> -->
+<!-- <include name="testEEAddLongTermDisability" /> -->
+<!-- <include name="testElectionSummary" /> -->
+
+<!-- <include name="testEEDeclineMedicalPlan" /> -->
+<!-- <include name="testEEDeclineDentalPlan" /> -->
+<!-- <include name="testEEDeclineVisionPlan" /> -->
+
+</methods>
+</classes>
+</test> 
+</suite> 

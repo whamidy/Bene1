@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Suite" parallel="false">
+
+<parameter name="url" value="N2.benetrac.com/btrac/broker.asp" />
+<parameter name="gohome" value="https://n2.benetrac.com/btrac/pdsignin.asp" />
+<parameter name="username" value="whamidy" />
+<parameter name="password" value="Password1" />
+<parameter name="site" value="CELL5572" />
+
+<parameter name="employeefn" value="Automation" />
+<parameter name="employeeln" value="User" />
+<parameter name="employeeinitials" value="Autouser" />
+<parameter name="employeepassword" value="Password1" />
+<parameter name="employeepasswordnew" value="Password2" />
+ 
+
+<!-- BITS PLEASE TESTS -->
+<test name="Administrator" preserve-order="true">
+<classes>
+<class name="BitsPlease.A1Sprint4"/>
+<methods>
+
+<!-- <include name="testLogin" /> -->
+<!-- <include name="testInternalSecurity" /> -->
+<!-- <include name="testAddNewUser" />  -->
+<include name="testDB" />
+<!-- <include name="testModifyUser" /> -->
+<!-- <include name="testDB2" />  -->
+<!-- <include name="testAddNewUser2" /> -->
+<!-- <include name="testDB3" /> -->
+<!-- <include name="testModifyUser2" /> -->
+<!-- <include name="testDB4" /> -->
+
+<!-- <include name="testLogOut" /> -->
+
+</methods>
+</classes>
+</test> 
+</suite> 
