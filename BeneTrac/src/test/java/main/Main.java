@@ -1,11 +1,18 @@
 package main;
 
 
+import java.io.File;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Logger;
 import org.testng.Assert;
+import org.testng.ITestResult;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Parameters;
@@ -15,6 +22,8 @@ import org.testng.annotations.Test;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
@@ -3372,7 +3381,18 @@ public void testAddCoreLife() throws Exception {
 	}
 	
 	
-		
+  @AfterMethod
+  public void screenCaptureOnFailure(ITestResult testResult) throws IOException {
+	  if (testResult.getStatus() == ITestResult.FAILURE){
+		  System.out.println(testResult.getStatus());
+	  
+	  File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+	  String fileName = new SimpleDateFormat("MM-dd-yyyy_kkmmss_SSS").format(new Date());
+	  String methodName = testResult.getName();
+	  FileUtils.copyFile(scrFile, new File("c:\\Users\\whamidy\\git\\Bene1\\BeneTrac\\screenshots_onFail\\"+methodName+"_"+fileName+".png"));
+	  
+	  }
+	  }	
 
   
   @AfterSuite
