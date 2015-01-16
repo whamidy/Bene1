@@ -1230,14 +1230,19 @@ public void testAddCoreLife() throws Exception {
   String oldTab = driver.getWindowHandle();
   driver.findElement(By.name("Run")).click();
   log.info("AUDIT REPORT STARTED");
+   
+  Thread.sleep(30000);
   
-  Thread.sleep(25000);
+  
+  
   // considering that there is only one tab opened in that point.
   ArrayList<String> newTab = new ArrayList<String>(driver.getWindowHandles());
   newTab.remove(oldTab);
   // change focus to new tab
   driver.switchTo().window(newTab.get(0));
   // Do what you want here, you are in the new tab
+
+  
   
   try{
 	  	
