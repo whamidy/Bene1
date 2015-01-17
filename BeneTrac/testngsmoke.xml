@@ -22,35 +22,35 @@
 <class name="main.Main"/>
 <methods>
 <include name="testLogin" />
-<!-- <include name="testAddNormalEE" /> -->
+<include name="testAddNormalEE" />
 <include name="testAddDependent" />
-<!-- <include name="testAddMedical" /> -->
-<!-- <include name="testAddCoreLife" /> -->
+<include name="testAddMedical" />
+<include name="testAddCoreLife" />
 
 
 	<!-- BATCH PROCESSING -->
-<!-- <include name="testBatchProcessingEnrollAllMissingCore" /> -->
-<!-- <include name="testBatchProcessingRateTable" /> -->
+<include name="testBatchProcessingEnrollAllMissingCore" />
+<include name="testBatchProcessingRateTable" />
 
 
 	<!-- REPORTS -->
-<!-- <include name="testAuditReport" /> -->
-<!-- <include name="testBeneficiariesReport" /> -->
-<!-- <include name="testCobraInitialNotice" /> -->
+<include name="testAuditReport" />
+<include name="testBeneficiariesReport" />
+<include name="testCobraInitialNotice" />
 
-<!-- <include name="testLogOut" /> -->
+<include name="testLogOut" />
 
 
      
 <!-- EMPLOYEE TESTS -->
-<!-- <include name="testEELogin" /> -->
-<!-- <include name="testEEAddSpouse" /> -->
-<!-- <include name="testProceedToMyBenefits" /> -->
+<include name="testEELogin" />
+<include name="testEEAddSpouse" />
+<include name="testProceedToMyBenefits" />
 
-<!-- <include name="testEEAddDental" /> -->
-<!-- <include name="testEEAddCoreDependentLife" /> -->
-<!-- <include name="testElectionSummary" /> -->
-<!-- <include name="testEEDeclineVisionPlan" /> -->
+<include name="testEEAddDental" />
+<include name="testEEAddCoreDependentLife" />
+<include name="testElectionSummary" />
+<include name="testEEDeclineVisionPlan" />
 
 </methods>
 </classes>
